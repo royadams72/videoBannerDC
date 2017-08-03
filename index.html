@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ad</title>
+ <script language="javascript">
+var BANNER = BANNER || {};
+var dcVidFunctions;
+    BANNER.width = 950; BANNER.height = 270; //BANNER.expandHeight = 500; //BANNER.expandWidth = 500
+    BANNER.isExpanded = false;
+    BANNER.politeManifest = ["css/ad.css","https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js", "js/Video_Functions.js", "js/ad.js"];
+     function politeLoadComplete(){
+         //Create classes for ad - Double click functions can 'plug in' with added advert assets
+         dcVidFunctions = new DCVideoFunctions(video_dc) 
+         BANNER.ad.init(BANNER.width, BANNER.height, ad_container);
+         //BANNER.loadFiles(BANNER.politeManifest, function () { politeLoadComplete();});
+       //console.log(counter++)
+     }
+</script>   
+<style>
+    #ad_container{
+        display:none;
+    } 
+    </style>
+</head>
+
+<body style="background-color:#ffffff">
+    <!--ad-->
+      
+     <div id="ad_container">
+         <button id="background_exit_dc"></button>
+         <button id="playBtn" class='cover'></button>
+         <div id="video_container_dc">
+         	<video id="video_dc"></video>
+            <button id="video_control_play_dc" class="video_controls_dc"></button>
+            <button id="video_control_pause_dc" class="video_controls_dc"></button>
+            <button id="video_control_stop_dc" class="video_controls_dc"></button>
+            <button id="video_control_replay_dc" class="video_controls_dc"></button>
+            <button id="video_control_unmute_dc" class="video_controls_dc"></button>
+            <button id="video_control_mute_dc" class="video_controls_dc"></button>
+        </div>
+            <div id="bg1" class="bg cover"></div>
+            <div id="text1" class="text cover"></div>
+            <div id="playHead" class="text cover"></div>
+        
+       </div>
+    
+   <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+    <script src="js/dcInit.js"></script>
+</body>
+</html>
